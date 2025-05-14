@@ -1,3 +1,7 @@
 # PlantillaYEstrategia
 
-!(UML)(UML.png)
+***
+
+![UML](UML.png)
+
+***
