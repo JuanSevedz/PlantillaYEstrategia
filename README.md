@@ -51,7 +51,7 @@ API_KEY=tu_clave_aqui
 ### 1. Clona el repositorio
 
 ```bash
-git clone https://github.com/tu_usuario/PlantillaYEstrategia.git
+git clone https://github.com/JuanSevedz/PlantillaYEstrategia.git
 cd PlantillaYEstrategia/Strategy
 ```
 
