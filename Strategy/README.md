@@ -66,17 +66,3 @@ cd Strategy
 mvn clean install
 mvn exec:java
 ```
-
-***
-
-## UML Template Method
-
-![UML1](Plantilla/docs/WithClient/TemplateWithClient.png)
-
-***
-
-## UML Strategy
-
-![UML2](Estrategia/docs/Startegy.png)
-
-***
