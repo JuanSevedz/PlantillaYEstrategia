@@ -2,3 +2,7 @@
 /home/vedz11/Documentos/PlantillaYEstrategia/Strategy/src/main/java/com/navegador/EstrategiaRuta.java
 /home/vedz11/Documentos/PlantillaYEstrategia/Strategy/src/main/java/com/navegador/Navegador.java
 /home/vedz11/Documentos/PlantillaYEstrategia/Strategy/src/main/java/com/navegador/RutaCarretera.java
+/home/vedz11/Documentos/PlantillaYEstrategia/Strategy/src/main/java/com/navegador/RutaCiclista.java
+/home/vedz11/Documentos/PlantillaYEstrategia/Strategy/src/main/java/com/navegador/RutaPeatonal.java
+/home/vedz11/Documentos/PlantillaYEstrategia/Strategy/src/main/java/com/navegador/RutaTransportePublico.java
+/home/vedz11/Documentos/PlantillaYEstrategia/Strategy/src/main/java/com/navegador/RutaTuristica.java

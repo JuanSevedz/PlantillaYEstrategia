@@ -1,4 +1,8 @@
 com/navegador/Navegador.class
-com/navegador/RutaCarretera.class
+com/navegador/RutaCiclista.class
 com/navegador/EstrategiaRuta.class
+com/navegador/RutaTuristica.class
+com/navegador/RutaCarretera.class
+com/navegador/RutaPeatonal.class
+com/navegador/RutaTransportePublico.class
 com/navegador/Cliente.class
