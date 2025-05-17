@@ -1,16 +1,13 @@
 package com.navegador;
 
 public class Navegador {
-    private EstrategiaRuta estrategiaRuta;
+    private EstrategiaRuta estrategia;
 
-    public void setEstrategia(EstrategiaRuta estrategiaRuta) {
-        this.estrategiaRuta = estrategiaRuta;
+    public Navegador(EstrategiaRuta estrategia) {
+        this.estrategia = estrategia;
     }
 
     public String calcularRuta(String origen, String destino) {
-        if (estrategiaRuta == null) {
-            return "No se ha definido estrategia de ruta";
-        }
-        return estrategiaRuta.calcular(origen, destino);
+        return estrategia.calcular(origen, destino);
     }
 }
