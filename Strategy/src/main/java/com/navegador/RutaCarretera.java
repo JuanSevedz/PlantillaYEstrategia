@@ -6,12 +6,14 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+import io.github.cdimascio.dotenv.Dotenv;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
 public class RutaCarretera implements EstrategiaRuta {
 
-    private static final String API_KEY = "Tu_API_Key";
+    private static final Dotenv dotenv = Dotenv.load();
+    private static final String API_KEY = dotenv.get("API_KEY");
 
     @Override
     public String calcular(String origen, String destino) {
@@ -60,7 +62,6 @@ public class RutaCarretera implements EstrategiaRuta {
             double distanceKm = summary.getDouble("distance") / 1000.0;
             double durationMin = summary.getDouble("duration") / 60.0;
 
-            // Obtener instrucciones paso a paso
             JSONArray steps = json
                     .getJSONArray("routes")
                     .getJSONObject(0)
@@ -76,14 +77,13 @@ public class RutaCarretera implements EstrategiaRuta {
                 double pasoDistancia = paso.getDouble("distance");
                 instrucciones.append(String.format("%d. %s (%.0f m)\n", i + 1, instruction, pasoDistancia));
             }
-            // Construir la URL de Google Maps con origen y destino
+
             String mapsUrl = "https://www.google.com/maps/dir/" +
                     coordOrigen[1] + "," + coordOrigen[0] + "/" +
                     coordDestino[1] + "," + coordDestino[0];
 
             System.out.println("\n🌐 Abrir ruta en Google Maps: " + mapsUrl);
 
-            // Intentar abrir en el navegador (opcional)
             if (java.awt.Desktop.isDesktopSupported()) {
                 java.awt.Desktop.getDesktop().browse(new java.net.URI(mapsUrl));
             }
@@ -127,5 +127,4 @@ public class RutaCarretera implements EstrategiaRuta {
 
         return new double[] { coordinates.getDouble(0), coordinates.getDouble(1) };
     }
-
 }
