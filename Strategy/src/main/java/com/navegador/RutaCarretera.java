@@ -11,7 +11,7 @@ import org.json.JSONObject;
 
 public class RutaCarretera implements EstrategiaRuta {
 
-    private static final String API_KEY = "5b3ce3597851110001cf6248284c9da4e6584ab7ba059421cbe97a44";
+    private static final String API_KEY = "Tu_API_Key";
 
     @Override
     public String calcular(String origen, String destino) {
